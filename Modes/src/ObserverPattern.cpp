@@ -1,8 +1,3 @@
-// #include <iostream>
-// #include <string>
-// #include <vector>
-// #include "ObserverPattern.h"
-// #include "../inc/Observer_Secretary.h"
 #include <iostream>
 
 #include "../inc/Observer_StockObserver.h"

@@ -20,17 +20,18 @@ private:
 public:
     StockObserver() = default;
     StockObserver(string name, Secretary* sub) : Name(name), Sub(sub) {};
-    // void Update() {
-    //     // cout << Sub->GetAction() << ", " << this->Name << " Close Stock, keep working!" << endl;
-    // }
-    void Update();
+    void Update() {
+        cout << Sub->GetAction() << ", " << this->Name << " Close Stock, keep working!" << endl;
+    }
 
 
     ~StockObserver() = default;
 };
 
-void StockObserver::Update() {
-    cout << Sub->GetAction() << ", " << this->Name << " Close Stock, keep working!" << endl;
-}
+void Secretary::Notify() {
+        for (auto it : observers) {
+            it->Update();
+        }
+    }
 
 #endif

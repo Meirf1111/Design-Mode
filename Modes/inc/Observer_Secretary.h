@@ -24,11 +24,7 @@ public:
         observers.push_back(observer);
     }
 
-    void Notify() {
-        for (auto it : observers) {
-            it->Update();
-        }
-    }
+    void Notify();
 
     void SetAction(string action) {
         this->Action = action;
