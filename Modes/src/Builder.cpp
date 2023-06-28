@@ -34,12 +34,13 @@ public:
     }
 
     void show() {
-        cout << Head << endl;
-        cout << "Head:" << Head << endl;
+        cout << Head.size() << endl;
+        cout << "Head:" << this->Head << endl;
         cout << "Body:" << Body << endl;
         cout << "ArmLeft:" << ArmLeft << endl;
         cout << "ArmRight:" << ArmRight << endl;
         cout << "LegLeft:" << LegLeft << endl;
+        cout << "Head:" << Head << endl;
         cout << "LegRight:" << LegRight << endl;
         cout << endl;
     }
@@ -153,7 +154,8 @@ public:
             return NULL;
         }
 
-        Pb->BuildArmLeft();
+
+        Pb->BuildHead();
         Pb->BuildBody();
         Pb->BuildArmLeft();
         Pb->BuildArmRight();
