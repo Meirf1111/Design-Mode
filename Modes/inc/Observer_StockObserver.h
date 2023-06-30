@@ -28,10 +28,4 @@ public:
     ~StockObserver() = default;
 };
 
-void Secretary::Notify() {
-        for (auto it : observers) {
-            it->Update();
-        }
-    }
-
 #endif
